@@ -1,2 +1,101 @@
-@use "vars" as *
+@use "vars" as *;
 
+html {
+    background-color: $background-gray;
+    @include flex-column;
+}
+
+body {
+    background-color: $background;
+    width: 960px;
+    @include flex-column;
+}
+
+header {
+    @include block;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 700;
+    margin: 50px 0 -10px;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.job {
+    margin-bottom: 20px;
+    @extend ul;
+    p, h4 {
+        margin: 0 0 10px 35px;
+    }
+
+    h4 {
+        color: $text;
+    }
+
+    h3 {
+        @extend li;
+        margin-bottom: 0;
+    }
+}
+
+h4, li, a {
+    font-size: 1.2em;
+    font-weight: 400;
+    display: block;
+    color: $text-gray;
+}
+
+li {
+    display: list-item;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 400;
+    color: $text-gray;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+main {
+    @include flex-row;
+
+    .block {
+        @include block;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    * {
+        font-size: 18px;
+    }
+
+    body {
+        width: 600px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    * {
+        font-size: 12px;
+    }
+
+    body {
+        width: auto;
+    }
+
+}

@@ -1,11 +1,11 @@
-@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300;400;500;600;700&display=swap");
 * { /* RESET */
   vertical-align: baseline;
   text-align: left;
   font-weight: 400;
-  font-family: "Rubik", sans-serif;
+  font-family: "Roboto Mono", monospace;
   font-style: normal;
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.3;
   text-decoration: none;
   box-sizing: border-box;
@@ -13,9 +13,109 @@
   outline: 0;
   padding: 0;
   margin: 0;
-  color: #333433;
+  color: #494949;
 }
 
 head, script {
   display: none;
+}
+
+html {
+  background-color: #dadfea;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+body {
+  background-color: #ffffff;
+  width: 960px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header {
+  padding: 0px 150px 50px;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin: 50px 0 -10px;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h3 {
+  font-size: 1.5em;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.job {
+  margin-bottom: 20px;
+}
+.job p, .job h4 {
+  margin: 0 0 10px 35px;
+}
+.job h4 {
+  color: #494949;
+}
+.job h3 {
+  margin-bottom: 0;
+}
+
+h4, li, .job h3, a {
+  font-size: 1.2em;
+  font-weight: 400;
+  display: block;
+  color: #70706f;
+}
+
+li, .job h3 {
+  display: list-item;
+}
+
+p {
+  font-size: 1em;
+  font-weight: 400;
+  color: #70706f;
+}
+
+ul, .job {
+  list-style-position: inside;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: left;
+  align-items: flex-start;
+}
+main .block {
+  padding: 0px 150px 50px;
+}
+
+@media screen and (max-width: 960px) {
+  * {
+    font-size: 18px;
+  }
+  body {
+    width: 600px;
+  }
+}
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 12px;
+  }
+  body {
+    width: auto;
+  }
 }/*# sourceMappingURL=style.css.map */
